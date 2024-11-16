@@ -1,11 +1,12 @@
 @use "base/variables" as *;
+@use "base/mixins" as *;
 
 .sub-nav {
     padding-top     : 1.688rem;
     padding-bottom  : 4.125rem;
     background-color: $color-primary;
     position        : relative;
-    overflow: hidden;
+    overflow        : hidden;
     
     &-container {
         padding-left   : 0.625rem;
@@ -23,25 +24,20 @@
     }
 
     &__title {
-        font-size  : $font-size-h1;
+        @include adaptive-value('font-size', $h1-font-size-mobile, $h1-font-size-desktop);
+        @include adaptive-value('line-height', $h1-line-height-mobile, $h1-line-height-desktop);
         font-weight: $font-weight-h1;
-        line-height: $line-height-h1;
         color      : $color-text-secondary;
     }
 
     &__background {
-        width : 199.01px;
-        height: 201px;
-        right : 8.49px;
-        top   : 0px;
-
-        @media screen and (min-width: $screen-md) {
-            width : 249.92px;
-            height: 252.42px;
-            right : 86.5px;
-            bottom: 0px;
+        @include adaptive-background-property('width', 199.01px, 249.92px);
+        @include adaptive-background-property('height', 201px, 252.42px);
+        @include adaptive-background-property('right', 8.49px, 86.5px);
+        
+        & {
+            top: 0px;
         }
-
     }
 }
 

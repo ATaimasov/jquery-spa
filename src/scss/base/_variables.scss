@@ -1,27 +1,30 @@
+@use "base/functions" as *;
+
 // colors
 $color-primary: #5050EB;
 $color-secondary: #C78BFF;
 $color-background-fade: #000000;
-$color-background-main: #FFFFFF;
 
 //color-text
 $color-text-primary: #222222;
 $color-text-secondary: #FFFFFF;
 
-
 // screen sizes
-$screen-md : 768px;
-$screen-lg : 992px;
-// $screen-xs : 0;
-// $screen-sm : 480px;
-// $screen-xl : 1200px;
-// $screen-xxl: 1600px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1440px;
 
 // font-size
-$font-size-html: 100%;
-$font-size-h1: 2.438rem;
-$font-size-h2: 1.75rem;
-$font-size-h3: 1.25rem;
+$base-font-size: 16px; // if you want to change this value, don't forget to change the value in function px-to-rem
+
+$h1-font-size-mobile: 28px;
+$h1-font-size-desktop: 32px;
+
+$h2-font-size-mobile: 24px;
+$h2-font-size-desktop: 28px;
+
+$h3-font-size-mobile: 20px;
+$h3-font-size-desktop: 24px;
 
 // font-weight
 $font-weight-base: 400;
@@ -30,17 +33,22 @@ $font-weight-h2: 600;
 $font-weight-h3: 600;
 
 //line-height
-$line-height-base: 1.3rem;
-$line-height-aside: 1.138rem;
-$line-height-h1: 2.133rem;
-$line-height-h2: 2.133rem;
-$line-height-h3: 1.524rem;
+$line-height-base: 20.8px;
+$line-height-aside: 18.208px;
+
+$h1-line-height-mobile: 34.13px;
+$h1-line-height-desktop: 39.01px;
+
+$h2-line-height-mobile: 34.13px;
+$h2-line-height-desktop: 39.01px;
+
+$h3-line-height-mobile: 24.38px;
+$h3-line-height-desktop: 29.26px;
 
 // animation
 $animation-duration: 0.3s;
 $animation-easing: ease-in-out;
 $animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-
 
 // link
 $color-link-active: #5050EB;
@@ -49,14 +57,13 @@ $font-weight-link-active: 600;
 
 
 // button 
-$font-size-btn: 1rem;
-$font-weight-btn: 400;
-$line-height-btn: 1.219rem;
+$btn-font-size: 16px;
+$btn-line-height: 19.5px;
+$btn-font-weight: 400;
 
 // nav-utilities
-$font-size-nav-utilities: 0.875rem;
-$font-weight-nav-utilities: 400;
-$line-height-nav-utilities: 1.225rem;
+$nav-utilities-font-size: 14px; 
+$nav-utilities-line-height: 19.6px;
 $color-background-nav-utilities:#F8F8F8;
 $border-radius-nav-utilities: 8px;
 
@@ -67,17 +74,15 @@ $color-aside-btn: $color-text-secondary;
 $color-aside-btn-text: $color-link-active;
 
 //footer 
+$footer-link-font-size: 14px;
+$footer-link-line-height: 17.07px;
+$footer-link-font-weight: 400;
 $color-footer-text: #FFFFFF;
-$font-size-footer-link: 0.875rem;
-$line-height-footer-link: 1.067rem;
-$font-weight-footer-link: 400;
 $color-footer-copyright-border: #FFFFFF;
 
 // header-link
 $color-header-link: $color-text-primary;
 $color-header-link-active: $color-primary;
-$font-size-header-link: 1rem;
-$line-height-header-link: 1.4rem;
-$font-weight-header-link: 400;
-
-
+$header-link-font-size: 14px;
+$header-link-line-height: 22.4px;
+$header-link-font-weight: 400;

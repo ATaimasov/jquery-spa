@@ -1,4 +1,5 @@
 @use "base/variables" as *;
+@use "base/mixins" as *;
 
 .footer {
     background-color: $color-primary;
@@ -36,6 +37,10 @@
         &:nth-child(even) {
             padding-bottom: 2rem;
             padding-top: 0.75rem;
+
+            @media screen and (min-width: $screen-md) {
+                padding: 0;
+            }
         }
 
         &__item {
@@ -43,10 +48,10 @@
         }
 
         &__link {
+            @include adaptive-value('font-size', $footer-link-font-size);
+            @include adaptive-value('line-height', $footer-link-line-height);
             color: $color-footer-text;
-            font-size: $font-size-footer-link;
-            line-height: $line-height-footer-link;
-            font-weight: $font-weight-footer-link;
+            font-weight: $footer-link-font-weight;
         }
     }
 

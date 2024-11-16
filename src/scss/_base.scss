@@ -1,10 +1,11 @@
 @use "base/variables" as *;
+@use "base/mixins" as *;
 
 html {
-    font-size  : 100%;
+    @include adaptive-value('line-height', $line-height-base);
+    font-size  : $base-font-size;
     font-family: 'Montserrat';
     font-style : normal;
-    line-height: $line-height-base;
 }
 
 .background-element {
@@ -22,10 +23,10 @@ html {
 }
 
 .input {
+    @include adaptive-value('font-size', $nav-utilities-font-size);
     border-radius: $border-radius-nav-utilities;
     background   : $color-background-nav-utilities;
     color        : $color-text-primary;
-    font-size    : $font-size-nav-utilities;
 }
 
 .icon {

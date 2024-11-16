@@ -1,4 +1,5 @@
 @use "base/variables" as *;
+@use "base/mixins" as *;
 
 .section {
     padding       : 1.25rem 0.625rem 3.75rem;
@@ -45,14 +46,14 @@
 
     &__subtitle {
         padding-top: 1rem;
-        font-size  : $font-size-h3;
-        line-height: $line-height-h3;
+        @include adaptive-value('font-size', $h3-font-size-mobile, $h3-font-size-desktop);
+        @include adaptive-value('line-height', $h3-line-height-mobile, $h3-line-height-desktop);
         font-weight: $font-weight-h3;
     }
 
     &__title {
-        font-size  : $font-size-h2;
-        line-height: $line-height-h2;
+        @include adaptive-value('font-size', $h2-font-size-mobile, $h2-font-size-desktop);
+        @include adaptive-value('line-height', $h2-line-height-mobile, $h2-line-height-desktop);
         font-weight: $font-weight-h2;
     }
 

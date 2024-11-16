@@ -1,4 +1,5 @@
 @use "base/variables" as *;
+@use "base/mixins" as *;
 
 // contacts header styles
 .header { 
@@ -14,7 +15,6 @@
         }
     }
 }
-
 
 .nav {
 
@@ -39,20 +39,20 @@
         gap: 3.5rem; //3.75rem;
 
         &__link {
+            @include adaptive-value('font-size', $header-link-font-size);
+            @include adaptive-value('line-height', $header-link-line-height);
+            font-weight: $header-link-font-weight;
             color      : $color-header-link;
-            font-size  : $font-size-header-link;
-            line-height: $line-height-header-link;
-            font-weight: $font-weight-header-link;
         }
     }
 
     &-utilities {
+        @include adaptive-value('font-size', $nav-utilities-font-size);
+        @include adaptive-value('line-height', $nav-utilities-line-height);
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 2rem;
-        font-size: $font-size-nav-utilities;
-        line-height: $line-height-nav-utilities;
 
         &__search {
             flex-grow: 0.5;
