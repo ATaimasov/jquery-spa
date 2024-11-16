@@ -1,0 +1,44 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --build",
+    "deploy": "gulp deployFTP --build"
+  },
+  "author": "Alexander Taimasov <alexander.taimasov@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "del": "^7.1.0",
+    "dotenv": "^16.4.5",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-util": "^3.0.8",
+    "gulp-version-number": "^0.2.4",
+    "gulp-webp": "^5.0.0",
+    "gulp-webp-html-nosvg": "^1.1.1",
+    "gulp-webpcss": "^1.1.1",
+    "sass": "^1.80.7",
+    "vinyl-ftp": "^0.6.1",
+    "webp-converter": "^2.2.3",
+    "webpack": "^5.95.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

@@ -1,0 +1,43 @@
+<!-- mobile header -->
+<nav class="main-nav nav-sm">
+    <div class="main-nav-container">
+        <div class ="logo logo-company main-nav__logo">@@include('./icons/companyLogo.svg', {})</div>
+        <div class="main-nav__menu">
+            <div class ="icon main-nav__icon">@@include('./icons/search-line.svg', {})</div>
+            <div class ="icon main-nav__icon">@@include('./icons/eye-line.svg', {})</div>
+            <div class ="icon main-nav__icon">@@include('./icons/menu-3-line.svg', {})</div>
+        </div>
+    </div>
+</nav> 
+<!-- end mobile header -->
+
+<!-- laptop header -->
+<div class="main-nav nav-lg">
+    <div class="nav-lg__utilities nav-utilities">
+        <div class="nav-utilities__contacts">
+            @@include('../../contacts/contacts.html', { "class": "header"})
+        </div>
+        <div class="nav-utilities__search">
+            <div class="nav-utilities__search-container">
+                <input class="input nav-utilities__search-input" type="text" placeholder="поиск...">
+                <div class ="icon nav-utilities__search-icon">@@include('./icons/search-line.svg', {})</div>
+            </div>
+        </div>
+        <div class="nav-utilities__accessibility">
+            <div class ="icon nav-utilities__accessibility-icon">@@include('./icons/eye-line.svg', {})</div>
+            <p class="nav-utilities__accessibility-text">Версия для слабовидящих</p>
+        </div>
+    </div>
+    <nav class="main-nav-container">
+        <div class ="logo logo-company main-nav__logo">@@include('./icons/companyLogo.svg', {})</div>
+        <ul class="nav-list">
+            <li class="nav-list__item"><a href="#" class="link nav-list__link link--active">О нас</a></li>
+            <li class="nav-list__item"><a href="#" class="link nav-list__link">Пациентам</a></li>
+            <li class="nav-list__item"><a href="#" class="link nav-list__link">Платные услуги</a></li>
+            <li class="nav-list__item"><a href="#" class="link nav-list__link">Новости</a></li>
+            <li class="nav-list__item"><a href="#" class="link nav-list__link">Документы</a></li>
+            <li class="nav-list__item"><a href="#" class="link nav-list__link">Контакты</a></li>
+        </ul>
+    </nav>
+</div> 
+<!-- end of laptop header  -->

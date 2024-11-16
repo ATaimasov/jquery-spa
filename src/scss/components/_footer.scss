@@ -1,0 +1,92 @@
+@use "base/variables" as *;
+
+.footer {
+    background-color: $color-primary;
+
+    &-info {
+        padding: 2.25rem 0.625rem;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $screen-md) {
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 1.563rem;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            // correspond padding of copyright 
+            justify-content: space-between;
+
+            & > *:last-child {
+                padding-right: 7.5rem;
+            }
+            & > *:first-child {
+                padding-left: 7.5rem;
+            }
+        }
+    }
+
+    &-list,
+    &-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        &:nth-child(even) {
+            padding-bottom: 2rem;
+            padding-top: 0.75rem;
+        }
+
+        &__item {
+            list-style: none;
+        }
+
+        &__link {
+            color: $color-footer-text;
+            font-size: $font-size-footer-link;
+            line-height: $line-height-footer-link;
+            font-weight: $font-weight-footer-link;
+        }
+    }
+
+    &-copyright {
+        padding: 1rem 0.625rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $color-footer-copyright-border;
+        color: $color-footer-text;
+        gap: 2.938rem;
+
+        @media screen and (min-width: $screen-md) {
+            padding: 1rem 7.5rem;
+        }
+
+        &__logo {
+            @media screen and (min-width: $screen-lg) {
+                width: 7.341rem;
+                height: 3.375rem;
+            }
+        }
+    }
+
+    &-contacts {
+        & .contact {
+            flex-direction: row;
+            gap: 0.5rem;
+            color: $color-footer-text;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 2rem; 
+
+    @media screen and (min-width: $screen-md) {
+        padding-top: 0;
+    }
+}

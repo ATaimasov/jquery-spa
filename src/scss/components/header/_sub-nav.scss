@@ -1,0 +1,79 @@
+@use "base/variables" as *;
+
+.sub-nav {
+    padding-top     : 1.688rem;
+    padding-bottom  : 4.125rem;
+    background-color: $color-primary;
+    position        : relative;
+    
+    &-container {
+        padding-left   : 0.625rem;
+        display        : flex;
+        justify-content: flex-start;
+        flex-direction : column;
+        gap            : 2.25rem;
+
+        @media screen and (min-width: $screen-md) {
+            padding-left: 15.28%;  // corresponding to view width of section containers
+        }
+        @media screen and (min-width: $screen-lg) {
+            padding-left: 7.5rem;
+        }
+    }
+
+    &__title {
+        font-size  : $font-size-h1;
+        font-weight: $font-weight-h1;
+        line-height: $line-height-h1;
+        color      : $color-text-secondary;
+    }
+
+    &__background {
+        min-width : 12.528rem;
+        min-height: 13.931rem;
+        right     : 8.49px;
+        top       : -20px;
+
+        @media screen and (min-width: $screen-md) {
+            width : 15.62rem;
+            height: 15.776rem;
+            right : 5.406rem;
+        }
+
+    }
+}
+
+.breadcrumbs {
+
+    &-container {
+        display       : flex;
+        flex-direction: row;
+        margin        : 0;
+        padding       : 0;
+    }
+
+    &__item {
+
+        &:first-child {
+            padding-right: 0.5rem;
+            color        : $color-link-visited;
+        }
+    
+        &:not(:first-child) {
+            padding-left: 0.5rem;
+            border-left : 1px solid $color-link-visited;
+        }
+
+        &:last-child {
+            color: $color-text-secondary;
+        }
+    
+    }
+    
+    &__link {
+        text-decoration: none;
+        color          : $color-link-visited;
+    
+    }
+}
+
