@@ -7,6 +7,7 @@
     justify-content : center;
     background-color: $color-aside-background;
     position        : relative;
+    overflow        : hidden;
 
     &__container {
         display        : flex;
@@ -50,61 +51,186 @@
 
     &__background {
 
-        // Intersect upper-left
+            // Intersect upper-left
         &:first-child {
-            width : 117.43px;
-            height: 111.43px;
-            top       : 0;
-            left      : -5px;
-            transform : rotate(89deg) scaleX(-1);
+            width    : 117.43px;
+            height   : 111.43px;
+            top      : 0px;
+            left     : -14px;
+            transform: rotate(90deg) scaleX(-1);
 
-            @media screen and (min-width: $screen-md) {
-                min-width : 175.39px;
-                min-height: 166.43px;
+            @media screen and (min-width: $screen-lg) {
+                width    : 175.39px;
+                height   : 166.43px;
+                top      : 0px;
+                left     : -18px;
+                transform: rotate(90deg) scaleX(-1);
+
             }
         }
 
-        // Intersect bottom-right
+        // &:first-child {
+        //     --min-width: 117.43px;
+        //     --max-width: 175.39px;
+        //     --min-height: 111.43px;
+        //     --max-height: 166.43px;
+        //     --min-left: -14px;
+        //     --max-left: 0px;
+          
+        //     width: clamp(var(--min-width), calc(var(--min-width) + ((100vw - 768px) * 0.0584)), var(--max-width));
+        //     height: clamp(var(--min-height), calc(var(--min-height) + ((100vw - 768px) * 0.0550)), var(--max-height));
+        //     top: 0px;
+        //     left: clamp(var(--min-left), calc(var(--min-left) + ((100vw - 768px) * 0.0208)), var(--max-left));
+        //     transform: rotate(90deg) scaleX(-1);
+        //   }
+
+        // 
+
+            // Intersect bottom-right
         &:nth-child(2) {
             width : 103.95px;
+            // width : 27.72vw;
             height: 104.99px;
-            right     : 0;
-            bottom    : 0;
-            right     : -8px;
-            bottom    : -5px;
-
-            @media screen and (min-width: $screen-md) {
-                width : 471.28px;
+            right : -7.95px;
+            bottom: 0px;
+            
+            @media screen and (min-width: $screen-lg) {
+                width :  471.28px;
+                // width :  32.728vw;
                 height: 475.99px;
+                // right : 22.86px;
+                right: 1.5875%;
             }
         }
 
-        // blood-cell upper-right (first)
-        &:nth-child(3) {
-            width: 16.93px;
-            height: 17.8px;
-            left: 63px;
-            top: 40px;
-            transform: rotate(95deg);
+          // blood-cells start
 
-            @media screen and (min-width: $screen-md) {
+            // blood-cell upper-left (first)
+        &:nth-child(3) {
+            width    : 16.93px;
+            height   : 17.8px;
+            left     : 52px;
+            top      : 38.26px;
+            transform: scaleX(-1);
+
+            @media screen and (min-width: $screen-lg) {
                 width : 35.79px;
                 height: 37.64px;
+                left  : 197px;
+                top   : 57px;
             }
         }
 
-          // blood-cell upper-right (second)
+              // blood-cell upper-left (second)
           &:nth-child(4) {
-            width: 11.18px;
-            height: 11.76px;
-            left: 102px;
-            top: 23px;
-            transform: rotate(13deg);
+            width    : 11.18px;
+            height   : 11.76px;
+            left     : 91.75px;
+            top      : 22px;
+            transform: rotate(23.64deg);
             
 
-            @media screen and (min-width: $screen-md) {
+            @media screen and (min-width: $screen-lg) {
                 width : 23.64px;
                 height: 24.86px;
+                left  : 302px;
+                top   : 39px;
+            }
+        }
+
+              // blood-cell bottom-left (first)
+          &:nth-child(5) {
+            width : 34.19px;
+            height: 35.96px;
+            left  : 61px;
+            bottom: 31.92px;
+            
+            @media screen and (min-width: $screen-lg) {
+                width : 67.13px;
+                height: 70.6px;
+                left  : 150px;
+                bottom: 90.2px;
+            }
+        }
+
+              // blood-cell bottom-left (second)
+          &:nth-child(6) {
+            width    : 11.31px;
+            height   : 11.89px;
+            left     : 85.02px;
+            bottom   : 6.93px;
+            transform: rotate(-146.68deg) scaleX(-1);
+            
+            @media screen and (min-width: $screen-lg) {
+                width : 22.2px;
+                height: 23.35px;
+                left  : 249px;
+                bottom: 67.29px;
+            }
+        }
+
+              // blood-cell upper-right
+          &:nth-child(7) {
+            width    : 23.25px;
+            height   : 24.45px;
+            top      : 46.51px;
+            right    : -7.8px;
+            transform: rotate(-60deg) scaleX(-1);
+            
+            @media screen and (min-width: $screen-lg) {
+                width : 25.2px;
+                height: 26.5px;
+                top   : 70px;
+                right : 190.45px;
+            }
+        }
+
+          //     blood-cell bottom-right
+          &:nth-child(8) {
+            width    : 22.2px;
+            height   : 23.35px;
+            right    : 34.62px;
+            bottom   : 68.29px;
+            transform: rotate(-146.68deg) scaleX(-1);
+            
+            @media screen and (min-width: $screen-lg) {
+                width : 22.2px;
+                height: 23.35px;
+                right : 414.62px;
+                bottom: 75.29px;
+            }
+        }
+        // blood-cells end
+
+              // dna bottom-left
+        &:nth-child(9) {
+            width    : 47.39px;
+            height   : 119.86px;
+            left     : -6px;
+            bottom   : -16.49px;
+            transform: rotate(150deg);
+
+            @media screen and (min-width: $screen-lg) {
+                width : 88.66px;
+                height: 224.25px;
+                left     : 12px;
+                bottom   : -45px;
+            }
+        }
+
+            // dna upper-right
+        &:nth-child(10) {
+            width    : 37.07px;
+            height   : 93.76px;
+            right     : 25.01px;
+            bottom      : 323.34px;
+            transform: rotate(30deg);
+
+            @media screen and (min-width: $screen-lg) {
+                width : 63.79px;
+                height: 161.34px;
+                right : 234.09px;
+                top: -49px;
             }
         }
 

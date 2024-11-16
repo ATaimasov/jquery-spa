@@ -5,6 +5,7 @@
     padding-bottom  : 4.125rem;
     background-color: $color-primary;
     position        : relative;
+    overflow: hidden;
     
     &-container {
         padding-left   : 0.625rem;
@@ -29,15 +30,16 @@
     }
 
     &__background {
-        min-width : 12.528rem;
-        min-height: 13.931rem;
-        right     : 8.49px;
-        top       : -20px;
+        width : 199.01px;
+        height: 201px;
+        right : 8.49px;
+        top   : 0px;
 
         @media screen and (min-width: $screen-md) {
-            width : 15.62rem;
-            height: 15.776rem;
-            right : 5.406rem;
+            width : 249.92px;
+            height: 252.42px;
+            right : 86.5px;
+            bottom: 0px;
         }
 
     }
