@@ -24,7 +24,7 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { ftp } from "./gulp/tasks/ftp.js";
-import { templates } from "./gulp/tasks/templates.js";
+import { generateTemplates } from "./gulp/tasks/templates.js";
 
 function watcher () {
     // gulp.watch(path.watch.favicons, copySVG);
@@ -34,14 +34,14 @@ function watcher () {
     gulp.watch(path.watch.fonts, copyFonts);
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
+    gulp.watch(path.watch.templates, generateTemplates);
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.images, images);
-    gulp.watch(path.watch.templates, templates);
 }
 
 const copy = gulp.parallel(copyImages, copyFavicons, copyFonts); //copyVideos copySVG, 
 
-const mainTasks = gulp.series(templates, gulp.parallel(images, copy, html, scss, js));
+const mainTasks = gulp.series(gulp.parallel(images, copy, html, scss, generateTemplates, js));
 const dev       = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build     = gulp.series(reset, mainTasks);
 const deployFTP = gulp.series(reset, mainTasks, ftp);

@@ -16,12 +16,13 @@ html {
 
 .link {
     text-decoration: none;
-    transition: opacity $animation-duration $animation-easing;
+    transition: opacity $animation-duration $animation-easing, color $animation-duration $animation-easing;
     cursor: pointer;
+    
 
     &.link--active {
         color      : $color-link-active;
-        font-weight: $font-weight-link-active;
+        // font-weight: $font-weight-link-active;
     }
 
     &:is(:focus-visible, :hover) {

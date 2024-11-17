@@ -230,10 +230,10 @@ html {
   }
 
 //fix "jumping" content when the scrollbar appears or is hidden.
-//html,
-//body {
-//  scrollbar-gutter: stable;
-//}
+html,
+body {
+ scrollbar-gutter: stable;
+}
 
 
 .hidden {
