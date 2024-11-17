@@ -46,8 +46,13 @@
         background-color: $color-aside-btn;
         color           : $color-aside-btn-text;
         cursor          : pointer;
+        transition: opacity $animation-duration $animation-easing;
         @include adaptive-value('font-size', $btn-font-size);
         @include adaptive-value('line-height', $btn-line-height);
+
+        &:is(:focus-visible, :hover) {
+            opacity: 0.8;
+        }
     }
 
     &__background {

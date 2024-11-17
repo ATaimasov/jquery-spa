@@ -26,9 +26,9 @@ import { images } from "./gulp/tasks/images.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
 function watcher () {
-    gulp.watch(path.watch.images, copyImages);
     // gulp.watch(path.watch.favicons, copySVG);
     // gulp.watch(path.watch.videos, copyVideos);
+    gulp.watch(path.watch.images, copyImages);
     gulp.watch(path.watch.favicons, copyFavicons);
     gulp.watch(path.watch.fonts, copyFonts);
     gulp.watch(path.watch.html, html);
