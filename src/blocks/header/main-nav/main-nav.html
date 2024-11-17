@@ -1,12 +1,16 @@
 <!-- mobile header -->
-<nav class="main-nav nav-sm">
+<nav class="main-nav nav-sm" id="nav-sm">
     <div class="main-nav-container">
         <div class ="logo logo-company main-nav__logo">@@include('./icons/companyLogo.svg', {})</div>
         <div class="main-nav__menu">
-            <div class ="icon main-nav__icon">@@include('./icons/search-line.svg', {})</div>
+            <div class ="icon main-nav__icon" id="mobile-search-icon">@@include('./icons/search-line.svg', {})</div>
             <div class ="icon main-nav__icon">@@include('./icons/eye-line.svg', {})</div>
             <div class ="icon main-nav__icon">@@include('./icons/menu-3-line.svg', {})</div>
         </div>
+    </div>
+    <div class="nav-sm__search nav-sm__search--hidden" id="mobile-search">
+        <input class="input nav-sm__search-input" type="text" placeholder="Поиск">
+        <div class ="icon nav-sm__search-icon" id="mobile-search-close">@@include('./icons/close-icon.svg', {})</div>
     </div>
 </nav> 
 <!-- end mobile header -->

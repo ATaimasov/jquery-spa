@@ -2,13 +2,22 @@
 
 // Removes units from values. This allows us to perform mathematical operations on numbers without units.
 @function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
+    @return math.div($value, $value * 0 + 1);
 }
 
 @function px-to-rem($pxValue: 16px, $base-font-size: 16px) {
-    @if(unit($pxValue) == 'rem') {
+    @if(math.unit($pxValue) == 'rem') {
+        @return $pxValue;
+    }
+
+    @if(math.unit($pxValue) == '') {
         @return $pxValue;
     }
 
     @return math.div($pxValue, $base-font-size) * 1rem;
 }
+
+@function px-to-percents($pxValue: 16px, $base-screen-size: 1440px) {
+    @return math.div($pxValue, $base-screen-size) * 100%;
+}
+

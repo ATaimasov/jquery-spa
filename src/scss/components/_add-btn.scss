@@ -1,0 +1,12 @@
+@use "base/variables" as *;
+@use "base/mixins-styles" as *;
+
+.accordion {
+    min-width       : 83.33%;
+    @include add-btn($color-secondary);
+}
+
+.download {
+    min-width       : 83.33%;
+    @include add-btn($color-primary);
+}

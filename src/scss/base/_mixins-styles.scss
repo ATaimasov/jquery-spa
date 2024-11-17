@@ -1,0 +1,68 @@
+@use "base/mixins-adaptive" as *;
+@use "base/variables" as *;
+
+@mixin add-btn($color: $color-secondary) {
+    position: relative;
+    border-radius: 10px;
+    background-color: #{$color};
+    @include adaptive-value('padding-top', 12.25px);
+    @include adaptive-value('padding-bottom', 12.25px);
+    @include adaptive-value('padding-right', 75px, 164px);
+    @include adaptive-value('padding-left', 18px,36px);
+
+    &__container {
+        display       : flex;
+        flex-direction: column;
+        color: $color-text-secondary;
+        @include adaptive-value('gap', 4px);
+    }
+
+
+    &__title {
+        font-weight: $summary-font-weight;
+        list-style: none;
+        display: block;
+        border: none;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: opacity $animation-duration $animation-easing;
+        @include adaptive-value('padding-top', 12.25px);
+        @include adaptive-value('padding-bottom', 12px);
+        @include adaptive-value('font-size', $summary-font-size);
+        @include adaptive-value('line-height', $summary-line-height);
+
+
+        &:is(:focus-visible, :hover) {
+            opacity: 0.5;
+            outline: none;
+        }
+
+        [open] & {
+            @include adaptive-value('padding-bottom', 12px);
+        }
+    }
+
+    &__icon {
+        color: inherit;
+        position: absolute;
+        transform: translateY(-50%);
+        transition: transform $animation-duration $animation-easing;
+        @include adaptive-value('width', 36px);
+        @include adaptive-value('height', 36px);
+        @include adaptive-value('top', 33px);
+        @include adaptive-value('right', 36px);
+
+        [open] & {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        @include adaptive-value('padding-top', 12px);
+        @include adaptive-value('padding-bottom', 12.25px);
+        @include adaptive-value('gap', 12px);
+    }
+}

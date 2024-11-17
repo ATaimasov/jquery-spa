@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('../blocks/head.html', {
+    @@include('./blocks/head.html', {
         "title": "Служба здоровья - БУЗ Орловской области \"Красноозерская ЦРБ\"",
         "ogTitle": "Служба здоровья - БУЗ Орловской области \"Красноозерская ЦРБ\"",
         "description": "lorem ipsum",
@@ -12,13 +12,15 @@
 </head>
 <body >
     <header class="header">
-        @@include('../blocks/header/header.html', {})
+        @@include('./blocks/header/header.html', {})
     </header>
     <main class="main">
-        @@include('../blocks/main/main.html', {})
+        <!-- @@include('./blocks/main/pages/about-us/about-us.html', {}) -->
+        @@include('./blocks/main/pages/patients/patients.html', {})
+        <div class="screen-overlay" id="screen-overlay"></div>
     </main>
     <footer class="footer">
-        @@include('../blocks/footer/footer.html', {})
+        @@include('./blocks/footer/footer.html', {})
     </footer>
     <script src="../js/app.min.js"></script>
 </body>

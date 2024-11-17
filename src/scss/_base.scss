@@ -1,11 +1,12 @@
 @use "base/variables" as *;
-@use "base/mixins" as *;
+@use "base/mixins-adaptive" as *;
+@use "sass:color";
 
 html {
-    @include adaptive-value('line-height', $line-height-base);
     font-size  : $base-font-size;
     font-family: 'Montserrat';
     font-style : normal;
+    @include adaptive-value('line-height', $line-height-base);
 }
 
 .background-element {
@@ -15,18 +16,25 @@ html {
 
 .link {
     text-decoration: none;
+    transition: opacity $animation-duration $animation-easing;
+    cursor: pointer;
 
     &.link--active {
         color      : $color-link-active;
         font-weight: $font-weight-link-active;
     }
+
+    &:is(:focus-visible, :hover) {
+        opacity: 0.8;
+        outline: none;
+    }
 }
 
 .input {
-    @include adaptive-value('font-size', $nav-utilities-font-size);
     border-radius: $border-radius-nav-utilities;
     background   : $color-background-nav-utilities;
     color        : $color-text-primary;
+    @include adaptive-value('font-size', $nav-utilities-font-size);
 }
 
 .icon {
@@ -61,4 +69,30 @@ html {
 .contact {
     display    : flex;
     align-items: center;
+}
+
+::selection {
+    background: color.adjust($color-primary, $lightness: -20%);
+    text-shadow: none;
+    color: white;
+}
+
+.screen-overlay {
+    @media screen and (max-width: $screen-lg) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        display: none;
+    }
+   
+}
+
+.no-scroll {
+    @media screen and (max-width: $screen-lg) {
+        overflow: hidden;
+    }
 }

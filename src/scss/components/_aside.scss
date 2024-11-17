@@ -1,5 +1,5 @@
 @use "base/variables" as *;
-@use "base/mixins" as *;
+@use "base/mixins-adaptive" as *;
 
 .additional-info {
     padding-top     : 5.375rem;
@@ -25,10 +25,10 @@
     }
 
     &__title {
-        @include adaptive-value('font-size', $h2-font-size-mobile, $h2-font-size-desktop);
-        @include adaptive-value('line-height', $h2-line-height-mobile, $h2-line-height-desktop);
         font-weight: $font-weight-h1;
         color      : $color-aside-text;
+        @include adaptive-value('font-size', $h2-font-size-mobile, $h2-font-size-desktop);
+        @include adaptive-value('line-height', $h2-line-height-mobile, $h2-line-height-desktop);
     }
 
     &__text {
@@ -39,8 +39,6 @@
     }
 
     &__btn {
-        @include adaptive-value('font-size', $btn-font-size);
-        @include adaptive-value('line-height', $btn-line-height);
         font-weight     : $btn-font-weight;
         padding         : 0.625rem 1.25rem;
         border          : none;
@@ -48,6 +46,8 @@
         background-color: $color-aside-btn;
         color           : $color-aside-btn-text;
         cursor          : pointer;
+        @include adaptive-value('font-size', $btn-font-size);
+        @include adaptive-value('line-height', $btn-line-height);
     }
 
     &__background {
@@ -83,7 +83,7 @@
             @include adaptive-background-property('width', 16.93px, 35.79px);
             @include adaptive-background-property('height', 17.8px, 37.64px);
             @include adaptive-background-property('top', 38.26px, 57px);
-            @include adaptive-background-property('left', -52px, 197px);
+            @include adaptive-background-property('left', 52px, 197px);
 
             & {
                 transform: scaleX(-1);

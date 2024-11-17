@@ -1,5 +1,5 @@
 @use "base/variables" as *;
-@use "base/mixins" as *;
+@use "base/mixins-adaptive" as *;
 
 // contacts header styles
 .header { 
@@ -14,14 +14,82 @@
             }
         }
     }
+
+    .navigation-wrapper--hidden {
+        top: -83px;
+    }
+    
+    .navigation-wrapper--appearing {
+        top: 0;
+    }
 }
+
+
 
 .nav {
 
     &-sm {
         display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 2;
+        transition: top 0.35s ease;
+        @include adaptive-value('min-height', 67.77px);
         @media screen and (min-width: $screen-lg) {
             display: none;
+        }
+
+        &__search {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            color: $color-text-secondary;
+
+            &--hidden {
+                display: none;
+            }
+            
+            @include adaptive-value('top', 67.77px);
+
+            @media screen and (min-width: $screen-md) {
+                width: 65%;
+                margin: 0 17.5%;
+            }
+
+            &-input {
+                position: relative;
+                border-radius: 0;
+                border: none;
+                background-color: $color-primary;
+                font-weight: 400;
+                outline: none;
+                width: 100%;
+                color: $color-text-secondary;
+                @include adaptive-value('font-size', 16px);
+                @include adaptive-value('line-height', 22.4px);
+                @include adaptive-value('padding-left', 12px);
+                @include adaptive-value('height', 74px);
+
+
+                &::placeholder {
+                    color: $color-text-secondary;
+                }
+    
+                &::focus-visible {
+                    outline: none;
+                }
+            }
+
+            &-icon {
+                position: absolute;
+                @include adaptive-value('top', 21px);
+                @include adaptive-value('right', 12px);
+                @include adaptive-value('height', 32px);
+                @include adaptive-value('width', 32px);
+            }
         }
     }
 
@@ -39,20 +107,20 @@
         gap: 3.5rem; //3.75rem;
 
         &__link {
-            @include adaptive-value('font-size', $header-link-font-size);
-            @include adaptive-value('line-height', $header-link-line-height);
             font-weight: $header-link-font-weight;
             color      : $color-header-link;
+            @include adaptive-value('font-size', $header-link-font-size);
+            @include adaptive-value('line-height', $header-link-line-height);
         }
     }
 
     &-utilities {
-        @include adaptive-value('font-size', $nav-utilities-font-size);
-        @include adaptive-value('line-height', $nav-utilities-line-height);
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 2rem;
+        @include adaptive-value('font-size', $nav-utilities-font-size);
+        @include adaptive-value('line-height', $nav-utilities-line-height);
 
         &__search {
             flex-grow: 0.5;

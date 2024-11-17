@@ -1,5 +1,5 @@
 @use "base/variables" as *;
-@use "base/mixins" as *;
+@use "base/mixins-adaptive" as *;
 
 .sub-nav {
     padding-top     : 1.688rem;
@@ -7,7 +7,14 @@
     background-color: $color-primary;
     position        : relative;
     overflow        : hidden;
-    
+
+
+    // for the fixed nav-sm
+    @include adaptive-value('margin-top', 67.77px);
+    @media screen and (min-width: $screen-lg) {
+        margin-top: 0;
+    }
+   
     &-container {
         padding-left   : 0.625rem;
         display        : flex;
@@ -24,20 +31,18 @@
     }
 
     &__title {
-        @include adaptive-value('font-size', $h1-font-size-mobile, $h1-font-size-desktop);
-        @include adaptive-value('line-height', $h1-line-height-mobile, $h1-line-height-desktop);
         font-weight: $font-weight-h1;
         color      : $color-text-secondary;
+        @include adaptive-value('font-size', $h1-font-size-mobile, $h1-font-size-desktop);
+        @include adaptive-value('line-height', $h1-line-height-mobile, $h1-line-height-desktop);
+      
     }
 
     &__background {
         @include adaptive-background-property('width', 199.01px, 249.92px);
         @include adaptive-background-property('height', 201px, 252.42px);
+        @include adaptive-background-property('top', -20px, -60px);
         @include adaptive-background-property('right', 8.49px, 86.5px);
-        
-        & {
-            top: 0px;
-        }
     }
 }
 

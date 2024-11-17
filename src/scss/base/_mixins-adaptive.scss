@@ -5,7 +5,9 @@
   // example: @include adaptive-background-property('width', 117.43px, 175.39px);
   
   @mixin adaptive-background-property($property, $mobile-value, $desktop-value, $tablet-value: null) {
-    #{$property}: $mobile-value;
+    & {
+      #{$property}: $mobile-value;
+    }
   
       // Calculation of the value for tablets, if not specified
     @if $tablet-value == null {
@@ -19,18 +21,22 @@
       $desktop-value-num: strip-unit($desktop-value);
       $screen-md-num    : strip-unit($screen-md);
       $screen-xl-num    : strip-unit($screen-xl);
-  
+
       #{$property}: calc(#{$tablet-value} + (#{$desktop-value-num} - #{$tablet-value-num}) * (min(100vw, #{$screen-xl}) - #{$screen-md}) / (#{$screen-xl-num} - #{$screen-md-num}));
     }
-  
+    
       // Fixed value for desktop
     @media screen and (min-width: $screen-xl) {
       #{$property}: $desktop-value;
     }
+ 
   }
 
   @mixin adaptive-value($property, $mobileValue, $desktopValue: null, $desktopBreakpoint: $screen-lg) {
-    #{$property}: px-to-rem($mobileValue);
+    & {
+      #{$property}: px-to-rem($mobileValue);
+    }
+    
 
     @if $desktopValue != null { 
         @media (min-width: $desktopBreakpoint) {

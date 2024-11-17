@@ -3,7 +3,6 @@
 // colors
 $color-primary: #5050EB;
 $color-secondary: #C78BFF;
-$color-background-fade: #000000;
 
 //color-text
 $color-text-primary: #222222;
@@ -20,8 +19,8 @@ $base-font-size: 16px; // if you want to change this value, don't forget to chan
 $h1-font-size-mobile: 28px;
 $h1-font-size-desktop: 32px;
 
-$h2-font-size-mobile: 24px;
-$h2-font-size-desktop: 28px;
+$h2-font-size-mobile: 28px;
+$h2-font-size-desktop: 32px;
 
 $h3-font-size-mobile: 20px;
 $h3-font-size-desktop: 24px;
@@ -86,3 +85,8 @@ $color-header-link-active: $color-primary;
 $header-link-font-size: 14px;
 $header-link-line-height: 22.4px;
 $header-link-font-weight: 400;
+
+//summary
+$summary-font-size: 16px;
+$summary-line-height: 19.2px;
+$summary-font-weight: 600;

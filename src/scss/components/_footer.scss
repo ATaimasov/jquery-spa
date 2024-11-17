@@ -1,5 +1,5 @@
 @use "base/variables" as *;
-@use "base/mixins" as *;
+@use "base/mixins-adaptive" as *;
 
 .footer {
     background-color: $color-primary;
@@ -48,10 +48,10 @@
         }
 
         &__link {
-            @include adaptive-value('font-size', $footer-link-font-size);
-            @include adaptive-value('line-height', $footer-link-line-height);
             color: $color-footer-text;
             font-weight: $footer-link-font-weight;
+            @include adaptive-value('font-size', $footer-link-font-size);
+            @include adaptive-value('line-height', $footer-link-line-height);
         }
     }
 
