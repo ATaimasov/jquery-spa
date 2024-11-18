@@ -43,6 +43,14 @@
         @include adaptive-background-property('height', 201px, 252.42px);
         @include adaptive-background-property('top', -20px, -60px);
         @include adaptive-background-property('right', 8.49px, 86.5px);
+
+        &--rotated {
+            transform: rotate(180deg);
+            @include adaptive-background-property('width', 318.32px, 399.8px);
+            @include adaptive-background-property('height', 319.73px, 401.57px);
+            @include adaptive-background-property('top', -14.33px, -43px);
+            @include adaptive-background-property('right', -160.58px, -107.92px);
+        }
     }
 }
 

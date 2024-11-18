@@ -6,7 +6,7 @@ $(() => {
     const $searchIcon      = $('#mobile-search-icon');
     const $searchIconClose = $('#mobile-search-close');
     const $search          = $('#mobile-search');
-    const $overlay         = $('#screen-overlay');
+    const $overlay         = $('#screen-overlay--fade');
     const $body            = $('body');
 
     const toggleSearch = () => {

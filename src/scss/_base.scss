@@ -58,10 +58,6 @@ html {
     min-height: 2.173rem;
 }
 
-.copyright-logo {
-    min-width : 6.375rem;
-    min-height: 3rem;
-}
 
 .contacts {
     display: flex;
@@ -78,7 +74,7 @@ html {
     color: white;
 }
 
-.screen-overlay {
+.screen-overlay--fade {
     @media screen and (max-width: $screen-lg) {
         position: fixed;
         top: 0;

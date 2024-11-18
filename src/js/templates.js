@@ -11,7 +11,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
         <div class="section__img-container">
             <img src="./img/section-img-1.png" alt="" class="section__img">
         </div>
-        <h3 class="section__subtitle">Подзаголовок h3</h3>
+        <h3 class="section__subtitle">Title h3</h3>
         <div class="section__text-container">
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
@@ -25,9 +25,9 @@ export const pagesTemplates = {'about-us': `<section class="section">
 
 <aside class="additional-info">
     <div class="additional-info__container">
-        <h2 class="additional-info__title">Информация о СПИДе</h2>
+        <h2 class="additional-info__title">Lorem Ipsum</h2>
         <p class="additional-info__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        <button class="additional-info__btn">Подробнее</button>
+        <button class="additional-info__btn">Read more</button>
     </div>
     <div class="background-elements">
         <!-- intersects -->
@@ -116,7 +116,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
 
 <section class="section">
     <div class="section__container section__container-1000">
-        <h2 class="section__title">Заголовок h2</h2>
+        <h2 class="section__title">Title h2</h2>
         <div class="section__text-container">
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
@@ -136,7 +136,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
         <div class="accordion__container">
             <details class="accordion">
                 <summary class="accordion__title"> 
-                    <span>Информация текстом или графические баннеры </span>
+                    <span>Information in text or graphic banners </span>
                     <div class ="icon accordion__icon"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
 <path d="M18 10.8C19.05 10.8 20.1 11.205 20.895 12L30.675 21.78C31.11 22.215 31.11 22.935 30.675 23.37C30.24 23.805 29.52 23.805 29.085 23.37L19.305 13.59C18.585 12.87 17.415 12.87 16.695 13.59L6.91497 23.37C6.47997 23.805 5.75997 23.805 5.32497 23.37C4.88997 22.935 4.88997 22.215 5.32497 21.78L15.105 12C15.9 11.205 16.95 10.8 18 10.8Z"/>
 </svg>
@@ -153,7 +153,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
             </details>
             <details class="accordion">
                 <summary class="accordion__title"> 
-                    <span>Информация текстом или графические баннеры </span>
+                    <span>Information in text or graphic banners </span>
                     <div class ="icon accordion__icon"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
 <path d="M18 10.8C19.05 10.8 20.1 11.205 20.895 12L30.675 21.78C31.11 22.215 31.11 22.935 30.675 23.37C30.24 23.805 29.52 23.805 29.085 23.37L19.305 13.59C18.585 12.87 17.415 12.87 16.695 13.59L6.91497 23.37C6.47997 23.805 5.75997 23.805 5.32497 23.37C4.88997 22.935 4.88997 22.215 5.32497 21.78L15.105 12C15.9 11.205 16.95 10.8 18 10.8Z"/>
 </svg>
@@ -173,7 +173,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
         <div class="download__container">
             <div class="download">
                 <a class="download__title" href="#" tabindex="0"> 
-                    <span>Файлы для скачивания. Например, конкурс "Вместе против коррупции"</span>
+                    <span>Files for download</span>
                     <div class ="icon download__icon"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.4 22.5C8.4 22.0029 7.99706 21.6 7.5 21.6C7.00294 21.6 6.6 22.0029 6.6 22.5H8.4ZM7.5 24H6.6H7.5ZM29.4 22.5C29.4 22.0029 28.9971 21.6 28.5 21.6C28.0029 21.6 27.6 22.0029 27.6 22.5H29.4ZM17.2972 23.4378C16.9867 23.8259 17.0496 24.3923 17.4378 24.7028C17.8259 25.0133 18.3923 24.9504 18.7028 24.5622L17.2972 23.4378ZM24.7028 17.0622C25.0133 16.6741 24.9504 16.1077 24.5622 15.7972C24.1741 15.4867 23.6077 15.5496 23.2972 15.9378L24.7028 17.0622ZM17.2972 24.5622C17.6077 24.9504 18.1741 25.0133 18.5622 24.7028C18.9504 24.3923 19.0133 23.8259 18.7028 23.4378L17.2972 24.5622ZM12.7028 15.9378C12.3923 15.5496 11.8259 15.4867 11.4378 15.7972C11.0496 16.1077 10.9867 16.6741 11.2972 17.0622L12.7028 15.9378ZM17.1 24C17.1 24.4971 17.5029 24.9 18 24.9C18.4971 24.9 18.9 24.4971 18.9 24H17.1ZM18.9 7.5C18.9 7.00294 18.4971 6.6 18 6.6C17.5029 6.6 17.1 7.00294 17.1 7.5H18.9ZM6.6 22.5V24H8.4V22.5H6.6ZM6.6 24C6.6 26.9823 9.01766 29.4 12 29.4V27.6C10.0118 27.6 8.4 25.9882 8.4 24H6.6ZM12 29.4H24V27.6H12V29.4ZM24 29.4C26.9823 29.4 29.4 26.9823 29.4 24H27.6C27.6 25.9882 25.9882 27.6 24 27.6V29.4ZM29.4 24V22.5H27.6V24H29.4ZM18.7028 24.5622L24.7028 17.0622L23.2972 15.9378L17.2972 23.4378L18.7028 24.5622ZM18.7028 23.4378L12.7028 15.9378L11.2972 17.0622L17.2972 24.5622L18.7028 23.4378ZM18.9 24V7.5H17.1V24H18.9Z"/>
 </svg>
@@ -182,7 +182,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
             </div>
             <div class="download">
                 <a class="download__title" href="#" tabindex="0"> 
-                    <span>Файлы для скачивания. Например, конкурс "Вместе против коррупции"</span>
+                    <span>Files for download</span>
                     <div class ="icon download__icon"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.4 22.5C8.4 22.0029 7.99706 21.6 7.5 21.6C7.00294 21.6 6.6 22.0029 6.6 22.5H8.4ZM7.5 24H6.6H7.5ZM29.4 22.5C29.4 22.0029 28.9971 21.6 28.5 21.6C28.0029 21.6 27.6 22.0029 27.6 22.5H29.4ZM17.2972 23.4378C16.9867 23.8259 17.0496 24.3923 17.4378 24.7028C17.8259 25.0133 18.3923 24.9504 18.7028 24.5622L17.2972 23.4378ZM24.7028 17.0622C25.0133 16.6741 24.9504 16.1077 24.5622 15.7972C24.1741 15.4867 23.6077 15.5496 23.2972 15.9378L24.7028 17.0622ZM17.2972 24.5622C17.6077 24.9504 18.1741 25.0133 18.5622 24.7028C18.9504 24.3923 19.0133 23.8259 18.7028 23.4378L17.2972 24.5622ZM12.7028 15.9378C12.3923 15.5496 11.8259 15.4867 11.4378 15.7972C11.0496 16.1077 10.9867 16.6741 11.2972 17.0622L12.7028 15.9378ZM17.1 24C17.1 24.4971 17.5029 24.9 18 24.9C18.4971 24.9 18.9 24.4971 18.9 24H17.1ZM18.9 7.5C18.9 7.00294 18.4971 6.6 18 6.6C17.5029 6.6 17.1 7.00294 17.1 7.5H18.9ZM6.6 22.5V24H8.4V22.5H6.6ZM6.6 24C6.6 26.9823 9.01766 29.4 12 29.4V27.6C10.0118 27.6 8.4 25.9882 8.4 24H6.6ZM12 29.4H24V27.6H12V29.4ZM24 29.4C26.9823 29.4 29.4 26.9823 29.4 24H27.6C27.6 25.9882 25.9882 27.6 24 27.6V29.4ZM29.4 24V22.5H27.6V24H29.4ZM18.7028 24.5622L24.7028 17.0622L23.2972 15.9378L17.2972 23.4378L18.7028 24.5622ZM18.7028 23.4378L12.7028 15.9378L11.2972 17.0622L17.2972 24.5622L18.7028 23.4378ZM18.9 24V7.5H17.1V24H18.9Z"/>
 </svg>
@@ -197,7 +197,7 @@ export const pagesTemplates = {'about-us': `<section class="section">
 
 <section class="section">
     <div class="section__container section__container-1000">   
-        <h3 class="section__subtitle">SEO-текст</h3>
+        <h3 class="section__subtitle">SEO-text</h3>
         <div class="section__text-container">
             <p class="accordion__text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

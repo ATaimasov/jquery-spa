@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     @@include('./blocks/head.html', {
-        "title": "Служба здоровья - БУЗ Орловской области \"Красноозерская ЦРБ\"",
-        "ogTitle": "Служба здоровья - БУЗ Орловской области \"Красноозерская ЦРБ\"",
+        "title": "test project",
+        "ogTitle": "test project",
         "description": "lorem ipsum",
         "ogDescription": "lorem ipsum",
         "ogImage": "PASTE-YOUR-DOMAIN/img/ogImage.png",
@@ -12,14 +12,16 @@
 </head>
 <body >
     <header class="header">
-        @@include('./blocks/header/header.html', {})
+        @@include('./blocks/header/header.html', {
+        "current-page": 'About us'
+        })
     </header>
     <main class="main" id="app">
         @@include('./blocks/main/pages/about-us/about-us.html', {})
-        <!-- @@include('./blocks/main/pages/patients/patients.html', {}) -->
     </main>
     <footer class="footer">
         @@include('./blocks/footer/footer.html', {})
+        <div class="screen-overlay--fade" id="screen-overlay--fade"></div>
     </footer>
     <script src="../js/app.min.js"></script>
 </body>
