@@ -1,10 +1,10 @@
-# Реактивность с jQuery
+# jQuery SPA
 
 ## Введение
 
 Изначально было тестовым заданием на верстку макета.
 
-Проект на сервере: https://test-jquery-reactivity-routing.таймасов.рф/about-us
+Проект на сервере: https://test-jquery-spa.таймасов.рф/about-us
 
 
 ## Требования тестового задания:
@@ -24,7 +24,7 @@
 
 Клонировать репозиторий:
 
-    git clone https://github.com/ATaimasov/_.test-jquery-reactivity-routing
+    git clone https://github.com/ATaimasov/_.test-jquery-spa
 
 Установить зависимости:
 
