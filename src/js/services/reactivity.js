@@ -11,7 +11,7 @@ $(() => {
         $links.each(function() {
             const linkPath = $(this).attr('href').substring(1);
             console.log(' ',  linkPath);
-            if (linkPath === currentPath) {
+            if (linkPath === currentPath && linkPath !== '') {
                 $(this).addClass('link--active');
             } else {
                 $(this).removeClass('link--active');
